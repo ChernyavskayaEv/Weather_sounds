@@ -1,0 +1,193 @@
+@font-face {
+  font-family: Roboto;
+  src: url('./fonts/Roboto-Regular.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  background-color: #cfe0e5;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1.5;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+/* ----------------------- */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 18px;
+  color: #ec7037;
+
+  .wearher-image {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -10px;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('/src/assets/summer-bg.jpg');
+    filter: blur(4px);
+    opacity: 0.9;
+  }
+
+  h1 {
+    margin: 10px;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px #fff, 2px 2px 5px #000;
+  }
+
+  .sounds-box {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .button {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      border-radius: 25px;
+
+      .icon {
+        width: 60px;
+      }
+    }
+  }
+
+  .volume {
+    margin: 20px;
+
+    input[type='range'] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 10px;
+      margin: 10px 0;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+      cursor: pointer;
+      width: 100%;
+      height: 10px;
+      background: #f66d52;
+      border-radius: 5px;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 1px 1px 2px #fff, 2px 2px 5px #000;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      cursor: pointer;
+      width: 15px;
+      height: 15px;
+      margin-top: -3px;
+      background: #ffffff;
+      border-radius: 15px;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 1px 1px 2px #fff, 2px 2px 5px #000;
+    }
+
+    input[type='range']::-moz-range-track {
+      cursor: pointer;
+      width: 100%;
+      height: 10px;
+      background: #f66d52;
+      border-radius: 5px;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 1px 1px 2px #fff, 2px 2px 5px #000;
+    }
+
+    input[type='range']::-moz-range-thumb {
+      appearance: none;
+      cursor: pointer;
+      width: 15px;
+      height: 15px;
+      background: #ffffff;
+      border-radius: 15px;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 1px 1px 2px #fff, 2px 2px 5px #000;
+    }
+  }
+}
